@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="description" content="{{ site.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />-->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl}}/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{{ site.baseurl }}">
+            CWHopkins
+          </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="{{ site.baseurl }}/">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <img src="{{ site.avatar }}" class="img-thumbnail" />
+          <div class="site-info">
+            <h2 class="site-name">
+              <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+            </h2>
+            <p class="text-muted">{{ site.description }}</p>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer"></footer>
+  
+    <script src="{{ site.baseurl }}/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+  </body>
+</html>
